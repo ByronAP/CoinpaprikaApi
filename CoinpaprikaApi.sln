@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33209.295
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoinpaprikaApi", "CoinpaprikaApi\CoinpaprikaApi.csproj", "{35E78AC4-6ADB-432C-B8A7-E22A21E02334}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{BEBA3D10-2B31-4FCC-9CC1-E417B22E1A0A}"
+	ProjectSection(SolutionItems) = preProject
+		coinpaprika-logo-banner-256x64.png = coinpaprika-logo-banner-256x64.png
+		coinpaprika-logo-banner.png = coinpaprika-logo-banner.png
+		coinpaprika-logo.png = coinpaprika-logo.png
+		LICENSE = LICENSE
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{5B3BA65B-AC32-4D72-BF5A-8BAD513889DF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{35E78AC4-6ADB-432C-B8A7-E22A21E02334}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35E78AC4-6ADB-432C-B8A7-E22A21E02334}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35E78AC4-6ADB-432C-B8A7-E22A21E02334}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35E78AC4-6ADB-432C-B8A7-E22A21E02334}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5B3BA65B-AC32-4D72-BF5A-8BAD513889DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3BA65B-AC32-4D72-BF5A-8BAD513889DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3BA65B-AC32-4D72-BF5A-8BAD513889DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3BA65B-AC32-4D72-BF5A-8BAD513889DF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B014F756-BF0E-48BB-9434-CFCF89261804}
+	EndGlobalSection
+EndGlobal
