@@ -1,6 +1,6 @@
 namespace Tests
 {
-    public class Tests
+    public class CoinsTests
     {
         [Test]
         public async Task GetCoinsTest()
