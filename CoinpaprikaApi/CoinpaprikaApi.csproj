@@ -22,6 +22,7 @@
     <PackageTags>coinpaprika,coinpaprika-api,api,bitcoin,eth,etherium,atom,cosmos,btc,usdt,tether,bnb,usdc,doge,dogecoin,xrp,ripple,ltc,litecoin,crypto,market,price,market-cap,cryptocurrencies,marketcap,netstandard</PackageTags>
     <Description>Coinpaprika API Client Library</Description>
     <Title>Coinpaprika API Client Library</Title>
+    <PackageId>Coinpaprika_Api</PackageId>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
