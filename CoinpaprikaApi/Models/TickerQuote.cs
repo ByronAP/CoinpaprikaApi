@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 
 namespace CoinpaprikaApi.Models
@@ -51,7 +51,7 @@ namespace CoinpaprikaApi.Models
         public decimal? AthPrice { get; set; }
 
         [JsonProperty("ath_date")]
-        public DateTimeOffset AthDate { get; set; }
+        public DateTimeOffset? AthDate { get; set; }
 
         [JsonProperty("percent_from_price_ath")]
         public double PercentFromPriceAth { get; set; }
