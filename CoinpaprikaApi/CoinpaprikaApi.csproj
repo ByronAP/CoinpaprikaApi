@@ -4,10 +4,10 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GenerateDocumentationFile>False</GenerateDocumentationFile>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>1.7.5.0</Version>
+    <Version>1.7.5.1</Version>
     <Authors>ByronAP</Authors>
-    <AssemblyVersion>1.7.5.0</AssemblyVersion>
-    <FileVersion>1.7.5.0</FileVersion>
+    <AssemblyVersion>1.7.5.1</AssemblyVersion>
+    <FileVersion>1.7.5.1</FileVersion>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <EnableNETAnalyzers>True</EnableNETAnalyzers>
     <AnalysisLevel>latest-recommended</AnalysisLevel>
@@ -19,7 +19,7 @@
     <RepositoryType>git</RepositoryType>
     <Copyright>Copyright © 2022 ByronAP, Coinpaprika. All rights reserved.</Copyright>
     <PackageReleaseNotes>See: https://github.com/ByronAP/CoinpaprikaApi/releases </PackageReleaseNotes>
-    <PackageTags>coinpaprika,coinpaprika-api,api,bitcoin,eth,etherium,atom,cosmos,btc,usdt,tether,bnb,usdc,doge,dogecoin,xrp,ripple,ltc,litecoin,crypto,market,price,market-cap,cryptocurrencies,marketcap,netstandard</PackageTags>
+    <PackageTags>coinpaprika,coinpaprika-api,api,bitcoin,eth,etherium,atom,cosmos,btc,usdt,tether,bnb,usdc,doge,dogecoin,xrp,ripple,ltc,litecoin,crypto,market,price,market-cap,cryptocurrencies,marketcap,netstandard,library,wrapper</PackageTags>
     <Description>Coinpaprika API Client Library</Description>
     <Title>Coinpaprika API Client Library</Title>
     <PackageId>Coinpaprika_Api</PackageId>
@@ -46,6 +46,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="7.0.0" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="7.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
     <PackageReference Include="RestSharp" Version="108.0.3" />

@@ -13,7 +13,11 @@
             }
             catch (HttpRequestException ex)
             {
-                if (!ex.Message.Contains("forbidden", StringComparison.InvariantCultureIgnoreCase))
+                if (ex.StatusCode == System.Net.HttpStatusCode.PaymentRequired)
+                {
+                    Assert.Warn(ex.Message);
+                }
+                else if (!ex.Message.Contains("forbidden", StringComparison.InvariantCultureIgnoreCase))
                 {
                     Assert.Fail();
                 }
@@ -29,7 +33,11 @@
             }
             catch (HttpRequestException ex)
             {
-                if (!ex.Message.Contains("forbidden", StringComparison.InvariantCultureIgnoreCase))
+                if (ex.StatusCode == System.Net.HttpStatusCode.PaymentRequired)
+                {
+                    Assert.Warn(ex.Message);
+                }
+                else if (!ex.Message.Contains("forbidden", StringComparison.InvariantCultureIgnoreCase))
                 {
                     Assert.Fail();
                 }

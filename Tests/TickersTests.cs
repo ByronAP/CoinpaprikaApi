@@ -5,28 +5,49 @@
         [Test]
         public async Task GetTickersTest()
         {
-            var callResult = await (await Helpers.GetApiClient()).Tickers.GetTickersAsync();
+            try
+            {
+                var callResult = await (await Helpers.GetApiClient()).Tickers.GetTickersAsync();
 
-            Assert.That(callResult, Is.Not.Null);
-            Assert.That(callResult, Is.Not.Empty);
+                Assert.That(callResult, Is.Not.Null);
+                Assert.That(callResult, Is.Not.Empty);
+            }
+            catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.PaymentRequired)
+            {
+                Assert.Warn(ex.Message);
+            }
         }
 
         [Test]
         public async Task GetTickerTest()
         {
-            var callResult = await (await Helpers.GetApiClient()).Tickers.GetTickerAsync("btc-bitcoin");
+            try
+            {
+                var callResult = await (await Helpers.GetApiClient()).Tickers.GetTickerAsync("btc-bitcoin");
 
-            Assert.That(callResult, Is.Not.Null);
-            Assert.That(callResult.Quotes, Is.Not.Empty);
+                Assert.That(callResult, Is.Not.Null);
+                Assert.That(callResult.Quotes, Is.Not.Empty);
+            }
+            catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.PaymentRequired)
+            {
+                Assert.Warn(ex.Message);
+            }
         }
 
         [Test]
         public async Task GetHistoricalTicksTest()
         {
-            var callResult = await (await Helpers.GetApiClient()).Tickers.GetHistoricalTicksAsync("btc-bitcoin", DateTimeOffset.UtcNow.AddDays(-5), interval: CoinpaprikaApi.Types.TickerInterval.d1);
+            try
+            {
+                var callResult = await (await Helpers.GetApiClient()).Tickers.GetHistoricalTicksAsync("btc-bitcoin", DateTimeOffset.UtcNow.AddDays(-5), interval: CoinpaprikaApi.Types.TickerInterval.d1);
 
-            Assert.That(callResult, Is.Not.Null);
-            Assert.That(callResult, Is.Not.Empty);
+                Assert.That(callResult, Is.Not.Null);
+                Assert.That(callResult, Is.Not.Empty);
+            }
+            catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.PaymentRequired)
+            {
+                Assert.Warn(ex.Message);
+            }
         }
     }
 }
