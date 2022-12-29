@@ -48,7 +48,7 @@ namespace CoinpaprikaApi.Models
         public double PercentChange1Y { get; set; }
 
         [JsonProperty("ath_price")]
-        public decimal AthPrice { get; set; }
+        public decimal? AthPrice { get; set; }
 
         [JsonProperty("ath_date")]
         public DateTimeOffset AthDate { get; set; }
