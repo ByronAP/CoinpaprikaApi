@@ -5,10 +5,17 @@
         [Test]
         public async Task GetPersonTest()
         {
-            var callResult = await (await Helpers.GetApiClient()).Persons.GetPersonAsync("vitalik-buterin");
+            try
+            {
+                var callResult = await (await Helpers.GetApiClient()).Persons.GetPersonAsync("vitalik-buterin");
 
-            Assert.That(callResult, Is.Not.Null);
-            Assert.That(callResult.Id, Is.EqualTo("vitalik-buterin"));
+                Assert.That(callResult, Is.Not.Null);
+                Assert.That(callResult.Id, Is.EqualTo("vitalik-buterin"));
+            }
+            catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.PaymentRequired)
+            {
+                Assert.Warn(ex.Message);
+            }
         }
     }
 }

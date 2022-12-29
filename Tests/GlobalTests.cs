@@ -5,10 +5,17 @@
         [Test]
         public async Task GetGlobalTest()
         {
-            var callResult = await (await Helpers.GetApiClient()).Global.GetGlobalAsync();
+            try
+            {
+                var callResult = await (await Helpers.GetApiClient()).Global.GetGlobalAsync();
 
-            Assert.That(callResult, Is.Not.Null);
-            Assert.That(callResult.MarketCapUsd, Is.GreaterThan(1));
+                Assert.That(callResult, Is.Not.Null);
+                Assert.That(callResult.MarketCapUsd, Is.GreaterThan(1));
+            }
+            catch (HttpRequestException ex) when (ex.StatusCode == System.Net.HttpStatusCode.PaymentRequired)
+            {
+                Assert.Warn(ex.Message);
+            }
         }
     }
 }
