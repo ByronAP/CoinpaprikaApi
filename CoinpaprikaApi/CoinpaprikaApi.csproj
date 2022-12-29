@@ -19,7 +19,7 @@
     <RepositoryType>git</RepositoryType>
     <Copyright>Copyright © 2022 ByronAP, Coinpaprika. All rights reserved.</Copyright>
     <PackageReleaseNotes>See: https://github.com/ByronAP/CoinpaprikaApi/releases </PackageReleaseNotes>
-    <PackageTags>coinpaprika,coinpaprika-api,api,bitcoin,eth,etherium,atom,cosmos,btc,usdt,tether,bnb,usdc,doge,dogecoin,xrp,ripple,ltc,litecoin,crypto,market,price,market-cap,cryptocurrencies,marketcap,netstandard</PackageTags>
+    <PackageTags>coinpaprika,coinpaprika-api,api,bitcoin,eth,etherium,atom,cosmos,btc,usdt,tether,bnb,usdc,doge,dogecoin,xrp,ripple,ltc,litecoin,crypto,market,price,market-cap,cryptocurrencies,marketcap,netstandard,library,wrapper</PackageTags>
     <Description>Coinpaprika API Client Library</Description>
     <Title>Coinpaprika API Client Library</Title>
     <PackageId>Coinpaprika_Api</PackageId>
